@@ -6,7 +6,7 @@
 }
 
 body {
-    background: rgb(25, 24, 24);
+    background: rgb(12, 11, 11);
 }
 
 a {
@@ -99,12 +99,14 @@ a {
 /* About Section */
 .About {
     padding: 100px 9% 50px;
+    color: aliceblue;
 }
 
 .About-content h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
     text-align: center;
+    color: aliceblue;
 }
 
 .About-info {
@@ -121,6 +123,7 @@ a {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 30px;
+
 }
 
 .skills h3, .education h3 {
@@ -163,6 +166,7 @@ a {
 .Portfolio {
     padding: 100px 9% 50px;
     background: rgba(39, 65, 238, 0.05);
+    color: aliceblue;
 }
 
 .Portfolio h2 {
@@ -235,12 +239,13 @@ a {
     background: rgba(39, 65, 238, 0.1);
     border-radius: 3px;
     font-size: 0.9rem;
-    color: rgb(39, 65, 238);
+    color: rgb(19, 44, 209);
 }
 
 /* Services Section */
 .Services {
     padding: 100px 9% 50px;
+    color: aliceblue;
 }
 
 .Services h2 {
@@ -314,6 +319,7 @@ a {
 .Contact {
     padding: 100px 9% 50px;
     background: rgba(39, 65, 238, 0.05);
+    color: aliceblue;
 }
 
 .Contact h2 {
@@ -370,6 +376,7 @@ footer {
     text-align: center;
     padding: 20px;
     background: rgba(39, 65, 238, 0.05);
+    color: aliceblue;
 }
 
 /* Responsive Design */
