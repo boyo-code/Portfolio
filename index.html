@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
     <nav class="navbar">
-        <a href="#" class="logo">Student Portfolio</a>
+        <a href="#" class="logo">My Portfolio</a>
         <div class="menu-btn">
             <i class="bi bi-list"></i>
         </div>
@@ -21,17 +27,167 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section class="Home">
+
+    <section class="Home" id="home">
         <div class="Home-info">
             <h1>Hi, I'm Nchungong Dylan</h1>
             <h2>a Software development Student</h2>
-            <p>i'm passionate Web developer</p>
+            <p>I'm passionate Web developer</p>
+            <div class="typing-text">
+                <span>I'm a </span>
+                <span class="typed"></span>
+            </div>
             <div class="btn-sci">
                 <a href="assets/Dylan Nwunasi Nchungong cv.pdf" class="btn" download="Nwunasi Nchungong.pdf">Download CV</a>
-                <a href="www.linkedin.com/in/dylan-nchungong"><i class="bi bi-linkedin"></i></a> 
+                <a href="https://www.linkedin.com/in/dylan-nchungong"><i class="bi bi-linkedin"></i></a> 
                 <a href="https://github.com/boyo-code"><i class="bi bi-github"></i></a> 
             </div>
         </div>
     </section>
+
+    <section id="about" class="About">
+        <div class="About-content">
+            <h2 data-aos="fade-up">About Me</h2>
+            <div class="About-info">
+                <div class="About-text" data-aos="fade-right">
+                    <p>I am a Computer Science student passionate about web and software development. Currently pursuing my studies at Vanier College, I'm actively learning and building projects to enhance my technical skills. I enjoy solving complex problems and creating user-friendly applications.</p>
+                    <div class="skills">
+                        <h3>Current Focus</h3>
+                        <ul>
+                            <li>Java and Spring boot</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Linux</li>
+                            <li>Flutter</li>
+                            <li>Dart</li>
+                            <li>Data Structures</li>
+                            <li>Web Development</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <p>Baccalauréat in Air Conditioning and Refrigeration</p>
+                        <p>GTHS Bamenda (2016)</p>
+                        <p>AEC in Software Development</p>
+                        <p>Expected Graduation: 2025</p>
+                    </div>
+                </div>
+                <div class="About-img" data-aos="fade-left">
+                    <img src="assets/pp.jpg" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="Portfolio">
+        <h2 data-aos="fade-up">Academic Projects</h2>
+        <div class="Portfolio-content">
+            <div class="Portfolio-item" data-aos="fade-up">
+                <div class="Portfolio-overlay">
+                    <div class="Portfolio-links">
+                        <a href="https://github.com/boyo-code/Portfolio" class="btn">Source Code</a>
+                    </div>
+                </div>
+                <div class="Portfolio-info">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive portfolio website built using HTML, CSS, and JavaScript. Features include smooth scrolling, mobile responsiveness, and interactive elements.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="Portfolio-overlay">
+                    <div class="Portfolio-links">
+                        <a href="https://github.com/boyo-code/eventManagement-SpringBoot-" class="btn">Source Code</a>
+                    </div>
+                </div>
+                <div class="Portfolio-info">
+                    <h3>Event Management System</h3>
+                    <p>A team project developing a web-based student management system. Implemented user authentication, database operations, and CRUD functionality.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="Services">
+        <h2 data-aos="fade-up">Areas of Interest</h2>
+        <div class="Services-content">
+            <div class="Service-item" data-aos="fade-up">
+                <i class="bi bi-code-square"></i>
+                <h3>Programming</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85">
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                <p>Learning and practicing various programming languages including Python, JavaScript, and Java. Focus on writing clean, efficient code.</p>
+            </div>
+            <div class="Service-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-palette"></i>
+                <h3>Web Development</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80">
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                <p>Building responsive websites and web applications. Learning modern frameworks and best practices in web development.</p>
+            </div>
+            <div class="Service-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-graph-up"></i>
+                <h3>Problem Solving</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90">
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                <p>Developing analytical and problem-solving skills through coding challenges and algorithm practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="Contact">
+        <h2 data-aos="fade-up">Get in Touch</h2>
+        <div class="Contact-content">
+            <form class="Contact-form" data-aos="fade-right">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="Contact-info" data-aos="fade-left">
+                <div class="Contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <p>nchungongdylan613@gmail.com</p>
+                </div>
+                <div class="Contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <p>821 Saint Croix Ave Saint-Laurent</p>
+                </div>
+                <div class="Contact-item">
+                    <i class="bi bi-mortarboard"></i>
+                    <p>Vanier College</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nchungong Dylan. My Portfolio</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>

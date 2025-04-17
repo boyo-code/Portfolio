@@ -1,59 +1,472 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background: rgb(25, 24, 24);
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    padding: 25px,9%;
-
+    padding: 25px 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: rgba(25, 24, 24, 0.9);
 }
-.navbar .logo{
+
+.navbar .logo {
     font-size: 30px;
     font-weight: 700;
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     margin-left: 35px;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     font-size: 20px;
     font-weight: 500;
     transition: 0.5s;
-} 
+}
+
 .navbar ul li:hover a,
-.navbar ul li.active a{
+.navbar ul li.active a {
     color: rgb(39, 65, 238);
 }
-.Home{
+
+.Home {
     display: flex;
     align-items: center;
     height: 100vh;
     padding: 60px 9% 0;
     color: aliceblue;
 }
-.home-info h1{
-    font-size: 50px ;
+
+.Home-info h1 {
+    font-size: 50px;
 }
-.home-info h2{
+
+.Home-info h2 {
     font-size: 35px;
     margin-top: -10px;
+}
+
+.btn-sci {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: rgb(39, 65, 238);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: rgb(25, 24, 24);
+    border: 1px solid rgb(39, 65, 238);
+}
+
+.btn-sci a i {
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.btn-sci a i:hover {
+    color: rgb(39, 65, 238);
+}
+
+/* About Section */
+.About {
+    padding: 100px 9% 50px;
+}
+
+.About-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.About-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.About-text {
+    flex: 1;
+}
+
+.About-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.skills h3, .education h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skills ul li {
+    list-style: none;
+    padding: 10px 20px;
+    background: rgba(39, 65, 238, 0.1);
+    border-radius: 5px;
+    border: 1px solid rgb(39, 65, 238);
+}
+
+.education p {
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.About-img {
+    flex: 1;
+}
+
+.About-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(39, 65, 238, 0.2);
+}
+
+/* Portfolio Section */
+.Portfolio {
+    padding: 100px 9% 50px;
+    background: rgba(39, 65, 238, 0.05);
+}
+
+.Portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.Portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.Portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.Portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(39, 65, 238, 0.2);
+}
+
+.Portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(39, 65, 238, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.Portfolio-links {
+    display: flex;
+    gap: 20px;
+}
+
+.Portfolio-info {
+    padding: 20px;
+}
+
+.Portfolio-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.Portfolio-info p {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    padding: 5px 10px;
+    background: rgba(39, 65, 238, 0.1);
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: rgb(39, 65, 238);
+}
+
+/* Services Section */
+.Services {
+    padding: 100px 9% 50px;
+}
+
+.Services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.Services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.Service-item {
+    padding: 30px;
+    background: rgba(39, 65, 238, 0.05);
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.Service-item:hover {
+    transform: translateY(-10px);
+    background: rgba(39, 65, 238, 0.1);
+}
+
+.Service-item i {
+    font-size: 3rem;
+    color: rgb(39, 65, 238);
+    margin-bottom: 20px;
+}
+
+.Service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.Service-item p {
+    color: #888;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.skill-progress {
+    width: 0;
+    height: 100%;
+    background: rgb(39, 65, 238);
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* Contact Section */
+.Contact {
+    padding: 100px 9% 50px;
+    background: rgba(39, 65, 238, 0.05);
+}
+
+.Contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.Contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.Contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Contact-form input,
+.Contact-form textarea {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+}
+
+.Contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.Contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Contact-item i {
+    font-size: 24px;
+    color: rgb(39, 65, 238);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(39, 65, 238, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(25, 24, 24, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .Home-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .Home-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .About-info {
+        flex-direction: column;
+    }
+
+    .About-img img {
+        max-width: 100%;
+    }
+
+    .Portfolio-content,
+    .Services-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 10px;
+    height: 10px;
+    background: rgb(39, 65, 238);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(39, 65, 238);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.3s;
+}
+
+/* Typing Text */
+.typing-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    min-height: 2em;
+}
+
+.typed {
+    color: rgb(39, 65, 238);
+    font-weight: 600;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
 }
